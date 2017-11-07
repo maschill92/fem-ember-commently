@@ -1,7 +1,7 @@
 <div class="title-row">
   <img src={{model.authorPhotoUrl}} alt={{authorName}} class="author-portrait">
   <h1 class='post-title'>{{titleize model.title}}</h1>
-  
+
   <div class="metadata-row">
     <div class="metadata-item author">
       <span class="metadata-item-label">By</span>
@@ -21,7 +21,7 @@
     <div class="metadata-item">
       <span class="metadata-item-label">Category</span>
       <span class="metadata-item-value">{{model.categoryName}}</span>
-    </div>  
+    </div>
     {{/if}}
   </div>
 
@@ -48,7 +48,7 @@
     No comments yet
   </p>
 {{/each}}
-{{x-textarea class='reply-field'}}
+{{x-textarea class='reply-field' value=postInfo.draftComment}}
 
 <div class="post-actions">
   <button class='btn'>Reply</button>

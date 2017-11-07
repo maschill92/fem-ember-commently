@@ -1,12 +1,15 @@
 {{#link-to "posts.show" model.id}}
   <div class="author-image">
-    <img src={{model.authorPhotoUrl}} alt="">
+    <img src= {{model.authorPhotoUrl}} alt="">
   </div>
   <div class="post-tile-content">
-      <span class="comment-count">
-        {{model.comments.length}}
-      </span>
-      <h3>{{model.title}}</h3>
+    <span class="comment-count">
+      {{model.comments.length}}
+    </span>
+    <h3>{{model.title}}</h3>
+    {{#if postInfo.draftComment}}
+      <span class="draft-indicator">DRAFT</span>
+    {{/if}}
     <span class="author-name">
       {{model.authorName}}
     </span>

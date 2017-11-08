@@ -4,6 +4,11 @@ const { Component } = Ember;
 
 export default Component.extend({
     classNames: ['post-full'],
+    postInfo: stateFor('post-info', 'model'),
 
-    postInfo: stateFor('post-info', 'model')
+    actions: {
+      deleteComment(comment) {
+        comment.destroy();
+      }
+    }
 });
